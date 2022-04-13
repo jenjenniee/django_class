@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ij_h!shmc09-r_=wh#vscgp(!fc330%$a1zj!081ev9dv$)i2j'
+SECRET_KEY = 'django-insecure-gs=$bke^183y6enwxvurcoe1lyoh$m2d0@dzkp8zc01y*r-0lc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,14 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'blog',
+    'single_pages',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
-    'single_pages',
 ]
 
 MIDDLEWARE = [
@@ -110,8 +110,8 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
-#투루면 gui에서는 아시아시간 디비에선 utc
-USE_TZ = False
+
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)

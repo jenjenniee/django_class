@@ -1,15 +1,14 @@
 from django.db import models
 
 
-# Create your models here.
 class Post(models.Model):
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=100)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        # 브라우저 및 어드민에 보이는 형식
-        return f'[{self.pk}] {self.title}'
+        return f'[{self.pk}]{self.title}'
 
-    #author :  추후작성예정
+    def get_absolute_url(self):
+        return f'/blog/{self.pk}/'
